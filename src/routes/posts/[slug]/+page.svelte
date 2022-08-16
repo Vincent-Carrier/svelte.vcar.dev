@@ -7,5 +7,5 @@
 
 <article class="card p-8">
 	<header class="h1">{post.title}</header>
-	<div class="font-serif prose-xl">{@html post.html}</div>
+	<div class="prose-xl font-serif">{@html post.html}</div>
 </article>

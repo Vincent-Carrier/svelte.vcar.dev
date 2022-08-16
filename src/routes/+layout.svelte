@@ -11,14 +11,14 @@
 	import PolkaDots from '../svg/polka-dots.svelte'
 </script>
 
-<div class="-z-10 fixed inset-0">
+<div class="fixed inset-0 -z-10">
 	<Pattern>
 		<PolkaDots />
 	</Pattern>
 </div>
-<main class="flex flex-col items-center max-w-prose mx-auto my-10">
+<main class="mx-auto my-10 flex max-w-prose flex-col items-center">
 	<slot name="nav">
-		<nav class="w-[36rem] mt-16 -mb-4 mr-8 z-10">
+		<nav class="z-10 mt-16 -mb-4 mr-8 w-[36rem]">
 			<Nav />
 		</nav>
 	</slot>

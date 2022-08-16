@@ -1,6 +1,6 @@
-<svg class="w-full h-full" style:background-color='var(--bg-color)'>
+<svg class="h-full w-full" style:background-color="var(--bg-color)">
 	<defs>
-		<pattern id="pattern" x="0" y="0" width='20' height='20' patternUnits='userSpaceOnUse'>
+		<pattern id="pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
 			<slot />
 		</pattern>
 	</defs>
