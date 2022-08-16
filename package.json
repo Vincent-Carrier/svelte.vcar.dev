@@ -16,6 +16,7 @@
 		"@playwright/test": "^1.22.2",
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
+		"@tailwindcss/typography": "^0.5.4",
 		"@types/luxon": "^3.0.0",
 		"@typescript-eslint/eslint-plugin": "^5.27.0",
 		"@typescript-eslint/parser": "^5.27.0",
@@ -44,6 +45,9 @@
 		"@fontsource/lobster": "^4.5.10",
 		"@fontsource/lobster-two": "^4.5.9",
 		"@fontsource/oleo-script": "^4.5.8",
-		"luxon": "^3.0.1"
+		"classnames": "^2.3.1",
+		"highlight.js": "^11.6.0",
+		"luxon": "^3.0.1",
+		"markdown-it-attrs": "^4.1.4"
 	}
 }

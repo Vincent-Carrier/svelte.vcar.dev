@@ -10,9 +10,4 @@
 		"sourceMap": true,
 		"strict": false
 	},
-	"paths": {
-		"@/*": [
-			"src/*"
-		],
-	},
 }
