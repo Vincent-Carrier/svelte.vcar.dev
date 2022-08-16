@@ -8,8 +8,18 @@
 			"label": "npm: dev",
 			"detail": "vite dev",
 			"runOptions": {
-				"instanceLimit": 1,
-			},
+				"instanceLimit": 1
+			}
+		},
+		{
+			"type": "npm",
+			"script": "dev",
+			"problemMatcher": [],
+			"label": "npm: dev",
+			"detail": "vite dev",
+			"runOptions": {
+				"instanceLimit": 1
+			}
 		}
 	]
 }

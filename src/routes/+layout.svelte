@@ -6,7 +6,7 @@
 	import '@fontsource/oleo-script'
 	import '../app.css'
 
-	import Nav from '$lib/nav.svelte'
+	import Nav from '$lib/Nav.svelte'
 	import Pattern from '../svg/pattern.svelte'
 	import PolkaDots from '../svg/polka-dots.svelte'
 </script>
