@@ -4,6 +4,7 @@ import hljs from 'highlight.js'
 import { DateTime } from 'luxon'
 import MarkdownIt from 'markdown-it'
 import attrs from 'markdown-it-attrs'
+import { dirname, resolve } from 'path'
 import type { PageServerLoad } from './$types'
 
 const md = new MarkdownIt({
@@ -23,7 +24,8 @@ const md = new MarkdownIt({
 }).use(attrs)
 
 export const load: PageServerLoad = async ({ params }) => {
-	const body = await fs.readFile(`./posts/${params.slug}.md`, { encoding: 'utf-8' })
+	const path = resolve(dirname(new URL(import.meta.url).pathname), `${params.slug}.md`)
+	const body = await fs.readFile(path, { encoding: 'utf-8' })
 	const { content, data } = graymatter(body)
 	data.published = DateTime.fromISO(data.date).toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY)
 	const html = md.render(content)

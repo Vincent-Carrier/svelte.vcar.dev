@@ -2,14 +2,15 @@ import fs from 'fs/promises'
 import { globby } from 'globby'
 import graymatter from 'gray-matter'
 import { DateTime } from 'luxon'
-import path from 'path/posix'
+import { basename, dirname, resolve } from 'path'
 import type { PageServerLoad } from './$types'
 
-const paths = await globby('./posts/**/*.md')
+const path = resolve(dirname(new URL(import.meta.url).pathname), './[slug]/')
+const paths = await globby(`${path}/**/*.md`)
 const files = await Promise.all(
 	paths.map(async filepath => {
 		const body = await fs.readFile(filepath, { encoding: 'utf-8' })
-		return { body, slug: path.basename(filepath, '.md') }
+		return { body, slug: basename(filepath, '.md') }
 	})
 )
 

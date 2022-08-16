@@ -6,4 +6,5 @@ node_modules
 .env
 .env.*
 !.env.example
-/posts/
+/src/routes/posts/[slug]/**.md
+/static/fonts/

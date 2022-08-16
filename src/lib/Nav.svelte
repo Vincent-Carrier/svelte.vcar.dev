@@ -13,6 +13,6 @@
 			$page.url.pathname === path.href
 				? 'text-yellow-600 underline underline-offset-4'
 				: 'text-gray-400'}
-		<li><a href={path.href} class={cx(klass, 'hover:text-yellow-600')}>{path.label}</a></li>
+		<li><a sveltekit:noscroll href={path.href} class={cx(klass, 'hover:text-yellow-600')}>{path.label}</a></li>
 	{/each}
 </ul>

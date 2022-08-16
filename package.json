@@ -50,6 +50,7 @@
 		"classnames": "^2.3.1",
 		"highlight.js": "^11.6.0",
 		"luxon": "^3.0.1",
+		"markdown-it": "^13.0.1",
 		"markdown-it-attrs": "^4.1.4"
 	}
 }

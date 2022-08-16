@@ -6,14 +6,13 @@
 	<p class="mb-24 font-serif text-2xl leading-relaxed text-stone-700">
 		<strong class="mb-4 inline-block text-4xl">Hi there! 👋</strong>
 		<br />
-		I'm a Montréal-based web developer,
+		I'm a Montréal-based web developer
 		<br />
 		<em class="mb-2 inline-block w-full origin-right -rotate-3 scale-105 transform text-right">
-			a digital vagabond,
+			a digital vagabond
 		</em>
 		<span class="text-xl">a detail-obsessed</span>
 		<span class="text-3xl font-medium italic">pixel-pusher</span>
-		,
 		<br />
 		<span class="block text-center">
 			and just generally
