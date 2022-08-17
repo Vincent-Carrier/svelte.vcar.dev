@@ -8,6 +8,7 @@ type PostPreview = {
 
 type Frontmatter = {
 	title: string
-	published: string
+	date: string // ISO
+	published: string // Human-readable
 	summary: string
 }

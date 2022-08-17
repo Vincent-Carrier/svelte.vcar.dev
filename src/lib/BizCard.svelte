@@ -3,8 +3,8 @@
 	import Twitter from '~icons/mdi/twitter'
 
 	const socials = [
-		{ Icon: Github, href: 'https://' },
-		{ Icon: Twitter, href: 'https://' },
+		{ Icon: Github, href: 'https://github.com/Vincent-Carrier' },
+		{ Icon: Twitter, href: 'https://twitter.com/VincntCarrier' },
 	]
 </script>
 
@@ -20,7 +20,7 @@
 		<div class="-mt-1 text-xl font-medium tracking-tight text-yellow-100">Web Developer</div>
 		<div class="mt-2 flex w-full justify-end gap-2">
 			{#each socials as social}
-				<a href={social.href}>
+				<a href={social.href} target="_blank">
 					<svelte:component this={social.Icon} class="h-8 w-8 text-yellow-100 drop-shadow-sm filter" />
 				</a>
 			{/each}

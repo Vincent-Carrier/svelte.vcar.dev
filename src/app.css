@@ -5,6 +5,7 @@
 @layer base {
 	html {
 		font-synthesis: none;
+		@apply bg-stone-100;
 	}
 
 	@font-face {
@@ -20,11 +21,11 @@
 
 @layer components {
 	.card {
-		@apply relative rounded-md border-2 border-stone-200 bg-stone-50 shadow-md;
+		@apply relative rounded-md border-2 border-stone-200 bg-stone-50 shadow-sm;
 	}
 
 	.h1 {
-		@apply font-display text-4xl text-yellow-600;
+		@apply font-display text-4xl text-yellow-500;
 	}
 }
 

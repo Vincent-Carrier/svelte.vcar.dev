@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import '@fontsource/inter/variable.css'
 	// import "@fontsource/alegreya-sans-sc"
 	import '@fontsource/alegreya/variable-italic.css'
@@ -7,29 +7,25 @@
 	import '../app.css'
 
 	import Nav from '$lib/Nav.svelte'
-	import Pattern from '../svg/pattern.svelte'
-	import PolkaDots from '../svg/polka-dots.svelte'
+	import Pattern from '$lib/pattern.svelte'
 
 	import { fly } from 'svelte/transition'
+	import type { LayoutData } from './$types'
 	
-	export let data
+	export let data: LayoutData
 	$: ({ url } = data)
 </script>
 
-<div class="fixed inset-0 -z-10">
-	<Pattern>
-		<PolkaDots />
-	</Pattern>
-</div>
-<main class="mx-auto my-10 flex max-w-prose flex-col items-center">
+<Pattern/>
+<div class="mx-auto my-10 flex max-w-prose flex-col items-center">
 	<slot name="nav">
-		<nav class="z-10 mt-16 -mb-4 mr-8 w-[36rem]">
+		<nav class="z-10 -mb-4 mr-8 w-[36rem]">
 			<Nav />
 		</nav>
 	</slot>
 	{#key url}
-		<div in:fly={{ y: -50, duration: 200, delay: 200 }} out:fly={{ y:50, duration: 200 }}>
+		<main in:fly={{ x: 200, duration: 400, delay: 200 }} out:fly={{ x: -200, duration: 200 }}>
 			<slot />
-		</div>
+		</main>
 	{/key}
-</main>
+</div>

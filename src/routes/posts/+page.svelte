@@ -2,11 +2,10 @@
 	import type { PageData } from '../../../.svelte-kit/types/src/routes/posts/$types'
 
 	export let data: PageData
-	$: ({ posts } = data)
 </script>
 
 <div class="grid gap-4">
-	{#each posts as post}
+	{#each data.posts as post}
 		<a href={`/posts/${post.slug}`}>
 			<article class="card px-8 py-6">
 				<header class="h1 underline underline-offset-2">{post.title}</header>

@@ -19,6 +19,8 @@
 		"@sveltejs/kit": "next",
 		"@tailwindcss/typography": "^0.5.4",
 		"@types/luxon": "^3.0.0",
+		"@types/markdown-it-attrs": "^4.1.0",
+		"@types/rss": "^0.0.29",
 		"@typescript-eslint/eslint-plugin": "^5.27.0",
 		"@typescript-eslint/parser": "^5.27.0",
 		"autoprefixer": "^10.4.8",
@@ -51,6 +53,7 @@
 		"highlight.js": "^11.6.0",
 		"luxon": "^3.0.1",
 		"markdown-it": "^13.0.1",
-		"markdown-it-attrs": "^4.1.4"
+		"markdown-it-attrs": "^4.1.4",
+		"rss": "^1.2.2"
 	}
 }
