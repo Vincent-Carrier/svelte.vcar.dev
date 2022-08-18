@@ -17,7 +17,7 @@
 		--fill-color: theme(colors.stone.200);
 	}
 
-	circle:nth-of-type(1) {
+	/* circle:nth-of-type(1) {
 		animation: twinkle 1.5s linear infinite alternate;
 	}
 	circle:nth-of-type(2) {
@@ -29,5 +29,5 @@
 		100% {
 			r: 3;
 		}
-	}
+	} */
 </style>

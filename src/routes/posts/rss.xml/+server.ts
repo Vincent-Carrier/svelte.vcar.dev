@@ -1,7 +1,6 @@
 import type { RequestHandler } from '@sveltejs/kit'
-import { DateTime } from 'luxon'
 import RSS from 'rss'
-import { posts } from '../+page.server'
+import { load } from '../+layout-post.server'
 
 const feed = new RSS({
 	title: 'vcar.dev',
@@ -10,12 +9,13 @@ const feed = new RSS({
 	feed_url: 'https://vcar.dev/posts/rss.xml',
 })
 
+const { posts } = await load()
 for (const post of posts) {
 	feed.item({
 		title: post.title,
 		description: post.summary,
 		url: `https://vcar.dev/posts/${post.slug}`,
-		date: DateTime.fromISO(post.date).toJSDate(),
+		date: post.date,
 	})
 }
 

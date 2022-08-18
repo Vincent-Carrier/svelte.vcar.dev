@@ -1,19 +1,12 @@
----
-title: JavaScript Iterators Made Easy
-date: '2021-01-16'
-summary: |
-  Let's explore one of JavaScript's most undervalued feature and find out how to make the best of it.
----
-
 JavaScript iterators are one of my favourite features of the language, yet nobody seems to know about them. Used well, they can make your code clearer, decoupled, and more memory-efficient.
 
-## So... what's an iterator anyway? {.Question}
+## So... what's an iterator anyway? {.text-right}
 
 Glad you asked. An **Iterator** is, simply put, an object which lets us loop through some values. Its signature looks more or less like this:
 
 ```typescript
 interface Iterator<T> {
-  next(): { value: T; done: boolean } @@
+  next(): { value: T; done: boolean }
 }
 ```
 
@@ -37,13 +30,13 @@ for (let n of iterable) {
 
 An important side note: the result of a generator function implements both the Iterable _and_ the Iterator protocols.
 
-## Wait, what's that little asterisk?<br> What's that `yield` thing? {.Question}
+## Wait, what's that little asterisk?<br> What's that `yield` thing? {.text-right}
 
 Just like `async` tells the JavaScript parser "This functions returns a `Promise`. BTW, it may use the `await` keyword.", the asterisk tells the parser "Hey, this function is a generator. It returns an Iterable. It may use `yield` within its body."
 
 `yield` tells the for-of loop "Here's your next thing. Have fun with it. Come back to me when you need some more." The important thing to remember is that `yield` **does not terminate the function** like `return` would, but merely suspends its execution until the next for-loop iteration.
 
-## What else can you do with them? {.Question}
+## What else can you do with them? {.text-right}
 
 A ton of things, actually. Some [Lodash](http://lodash.com) utilities are trivial to implement with generators. Here's a few of my favourites:
 
@@ -98,7 +91,7 @@ console.log([...map(range(4, 10, 2), (n) => n ** 2)])
 
 You can even implement your own [React-like framework](https://crank.js.org/) on top of Iterables, effectively treating the DOM as a render loop.
 
-## You mentioned `yield*` earlier.<br> What's that about? {.Question}
+## You mentioned `yield*` earlier.<br> What's that about? {.text-right}
 
 `yield*` is like the `yield` keyword, but is used with Iterables instead of plain values. This lets us compose generator functions together in a very natural way:
 
@@ -111,7 +104,7 @@ console.log([...times(4)])
 // => [0, 1, 2, 3]
 ```
 
-## So, are Iterables just, like... arrays? {.Question}
+## So, are Iterables just, like... arrays? {.text-right}
 
 Eh... not quite. An `Array` _is_ an Iterable, but not all Iterables are `Array`s. The main difference is that **Iterators are lazy**. They only compute the next element when explicitly asked. This makes them a great fit for, say, computing the thousandth element of the Fibonacci sequence.
 
@@ -146,7 +139,7 @@ console.log([...take(fibonacci(), 6)])
 // => [0, 1, 1, 2, 3, 5]
 ```
 
-## You said something about<br> making our own objects Iterables? {.Question}
+## You said something about<br> making your own objects Iterables? {.text-right}
 
 Right! We just need to implement `[Symbol.iterator]`. Here's what that would look like in practice:
 
@@ -187,7 +180,7 @@ fibonacci()
 // => [0, 1, 1, 4, 9, 25, 64, 169, 441, 1156]
 ```
 
-*Now, that's what I call functional programming!* Check out the [Babel plugin](https://babeljs.io/docs/en/babel-plugin-proposal-pipeline-operator) if you want to try it for yourself.
+Welcome to the future! Check out the [Babel plugin](https://babeljs.io/docs/en/babel-plugin-proposal-pipeline-operator) if you want to try it for yourself.
 
 ## Further reading
 

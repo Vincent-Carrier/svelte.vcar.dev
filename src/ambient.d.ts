@@ -1,14 +1,7 @@
-type Post = {
-	html: string
-} & Frontmatter
-
-type PostPreview = {
-	slug: string
-} & Frontmatter
-
 type Frontmatter = {
+	slug: string
 	title: string
-	date: string // ISO
-	published: string // Human-readable
-	summary: string
+	date: Date
+	published: string
+	summary?: string
 }

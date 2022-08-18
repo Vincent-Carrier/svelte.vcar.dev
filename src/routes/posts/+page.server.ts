@@ -1,30 +1,16 @@
-import fs from 'fs/promises'
-import { globby } from 'globby'
-import graymatter from 'gray-matter'
-import { DateTime } from 'luxon'
-import { basename, dirname, resolve } from 'path'
-import type { PageServerLoad } from './$types'
-
-const path = resolve(dirname(new URL(import.meta.url).pathname), './[slug]/')
-const paths = await globby(`${path}/**/*.md`)
-
-const buff = Buffer.alloc(1024 * 4)
-export const posts = await Promise.all(
-	paths.map(async filepath => {
-		const fd = await fs.open(filepath)
-		await fd.read(buff)
-		const chunk = buff.toString()
-		console.log(chunk)
-
-		const slug = basename(filepath, '.md')
-		const { data } = graymatter(chunk)
-		await fd.close()
-		data.published = DateTime.fromISO(data.date).toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY)
-
-		return { slug, ...data } as PostPreview
-	})
-)
+import type { PageServerLoad } from '.svelte-kit/types/src/routes/posts/$types'
 
 export const load: PageServerLoad = async function () {
+	const imports = import.meta.glob('./*/+page@post.svelte')
+	const modules = await Promise.all(Object.values(imports).map(f => f()))
+	const posts = modules.map((m: any) => ({
+		...m.frontmatter,
+		published: m.frontmatter.date.toLocaleString('en-GB', { dateStyle: 'full' }),
+	})) as Frontmatter[]
+	Object.keys(imports).forEach((path, i) => {
+		const [slug] = path.match(/^\.\/(.*)\//) as string[]
+		posts[i].slug = slug
+	})
+
 	return { posts }
 }
