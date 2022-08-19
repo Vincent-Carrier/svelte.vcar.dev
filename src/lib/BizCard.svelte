@@ -1,10 +1,12 @@
 <script lang="ts">
-	import Github from '~icons/mdi/github'
+	import Github from '~icons/mdi/github-face'
+	import Rss from '~icons/mdi/rss'
 	import Twitter from '~icons/mdi/twitter'
 
 	const socials = [
-		{ Icon: Github, href: 'https://github.com/Vincent-Carrier' },
-		{ Icon: Twitter, href: 'https://twitter.com/VincntCarrier' },
+		{ Icon: Github, class: 'text-yellow-200', href: 'https://github.com/Vincent-Carrier' },
+		{ Icon: Twitter, class: 'text-yellow-200', href: 'https://twitter.com/VincntCarrier' },
+		{ Icon: Rss, class: 'text-yellow-200', href: '/posts/index.xml' },
 	]
 </script>
 
@@ -17,11 +19,11 @@
 	<div class="w-36" />
 	<div class="my-auto whitespace-nowrap text-right">
 		<div class="font-display text-4xl text-yellow-50">Vincent Carrier</div>
-		<div class="-mt-1 text-xl font-medium tracking-tight text-yellow-100">Web Developer</div>
-		<div class="mt-2 flex w-full justify-end gap-2">
+		<div class="-mt-1 text-2xl font-medium text-yellow-100">Web Developer</div>
+		<div class="mt-1 flex w-full justify-end gap-1">
 			{#each socials as social}
 				<a href={social.href} target="_blank">
-					<svelte:component this={social.Icon} class="h-8 w-8 text-yellow-100 drop-shadow-sm filter" />
+					<svelte:component this={social.Icon} class={`h-8 w-8 drop-shadow-sm filter ${social.class}`} />
 				</a>
 			{/each}
 		</div>

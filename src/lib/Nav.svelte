@@ -3,6 +3,11 @@
 	const paths = [
 		{ href: '/', label: 'about' },
 		{ href: '/posts', label: 'blog' },
+		{
+			href: '/brainfood',
+			label: 'brainfood',
+			tooltip: "What I've been reading",
+		},
 	]
 </script>
 
@@ -12,7 +17,11 @@
 		{@const inactive = !active}
 		<li class="px-4">
 			<a sveltekit:noscroll href={path.href} class:active class:inactive>
-				{path.label}
+				{#if path.tooltip}
+					<abbr title={path.tooltip}>{path.label}</abbr>
+				{:else}
+					{path.label}
+				{/if}
 			</a>
 		</li>
 	{/each}

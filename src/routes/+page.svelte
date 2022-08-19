@@ -2,12 +2,12 @@
 	import Bizcard from '$lib/BizCard.svelte'
 </script>
 
-<article class="card flex flex-col gap-4 p-12">
+<article class="card max-w-xl flex flex-col gap-4 p-12">
 	<p class="mb-28 font-serif text-2xl leading-relaxed text-stone-700">
 		<strong class="mb-4 inline-block text-4xl">Hi there! 👋</strong>
 		<br />
 		I'm a Montréal-based web developer
-		<em class="mb-2 inline-block w-full origin-right -rotate-3 transform text-right text-3xl">
+		<em class="mb-4 inline-block w-full origin-right -rotate-3 transform text-right text-3xl">
 			a digital vagabond
 		</em>
 		<span class="text-xl">a detail-obsessed</span>

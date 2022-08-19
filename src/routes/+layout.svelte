@@ -1,8 +1,7 @@
 <script lang="ts">
-	import '@fontsource/inter/variable.css'
-	// import "@fontsource/alegreya-sans-sc"
 	import '@fontsource/alegreya/variable-italic.css'
 	import '@fontsource/alegreya/variable.css'
+	import "@fontsource/montserrat/variable.css"
 	import '@fontsource/oleo-script'
 	import '../app.css'
 
@@ -17,7 +16,7 @@
 </script>
 
 <Pattern/>
-<div class="mx-auto my-10 flex max-w-prose flex-col items-center">
+<div class="mx-auto my-10 flex max-w-3xl flex-col items-center">
 	<slot name="nav">
 		<nav class="z-10 -mb-4 mr-8 w-[36rem]">
 			<Nav />

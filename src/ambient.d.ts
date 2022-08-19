@@ -1,7 +1,6 @@
 type Frontmatter = {
 	slug: string
 	title: string
-	date: Date
-	published: string
+	date: string
 	summary?: string
 }

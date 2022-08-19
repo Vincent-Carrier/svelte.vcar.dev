@@ -5,7 +5,7 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				serif: ['AlegreyaVariable', 'Alegreya', 'serif'],
-				sans: ['InterVariable', 'system-ui', 'sans-serif'],
+				sans: ['MontserratVariable', 'system-ui', 'sans-serif'],
 				display: ['Oleo Script', 'sans-serif'],
 				mono: ['Berkeley Mono', 'monospace'],
 			},

@@ -1,18 +1,18 @@
 import fs from 'fs/promises'
-import hljs from 'highlight.js'
 import MarkdownIt from 'markdown-it'
 import attrs from 'markdown-it-attrs'
 import { resolve } from 'path'
+import shiki from 'shiki'
 
-function highlight(str: string, language: string) {
-	if (language && hljs.getLanguage(language)) {
-		return hljs.highlight(str, { language }).value
-	}
+const highlighter = await shiki.getHighlighter({ theme: 'github-light' })
 
-	return ''
-}
-
-const md = new MarkdownIt({ html: true, typographer: true, highlight }).use(attrs)
+const md = new MarkdownIt({
+	html: true,
+	typographer: true,
+	highlight(code, lang) {
+		return highlighter.codeToHtml(code, { lang })
+	},
+}).use(attrs)
 
 export const load: LayoutServerLoad = async function ({ url }) {
 	const path = resolve(`./src/routes${url.pathname}/index.md`)
