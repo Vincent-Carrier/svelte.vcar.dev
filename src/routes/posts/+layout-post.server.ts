@@ -1,3 +1,4 @@
+import type { Load } from '@sveltejs/kit'
 import fs from 'fs/promises'
 import MarkdownIt from 'markdown-it'
 import attrs from 'markdown-it-attrs'
@@ -14,11 +15,11 @@ const md = new MarkdownIt({
 	},
 }).use(attrs)
 
-export const load: LayoutServerLoad = async function ({ url }) {
+export const load: Load = async function ({ url }) {
 	const path = resolve(`./src/routes${url.pathname}/index.md`)
 	const f = await fs.readFile(path, { encoding: 'utf-8' })
 	const html = md.render(f)
 	const { frontmatter } = await import(`./${url.pathname.replace('/posts/', '')}/+page@post.svelte`)
 
-	return { html, ...frontmatter }
+	return { post: { html, ...frontmatter } as Post }
 }

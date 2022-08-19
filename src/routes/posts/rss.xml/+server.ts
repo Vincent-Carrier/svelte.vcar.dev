@@ -1,6 +1,6 @@
 import type { RequestHandler } from '@sveltejs/kit'
 import RSS from 'rss'
-import { load } from '../+layout-post.server'
+import { load } from '../+page.server'
 
 const feed = new RSS({
 	title: 'vcar.dev',
@@ -9,8 +9,8 @@ const feed = new RSS({
 	feed_url: 'https://vcar.dev/posts/rss.xml',
 })
 
-const { posts } = await load()
-for (const post of posts) {
+const res = await load(undefined!)
+for (const post of res!.posts) {
 	feed.item({
 		title: post.title,
 		description: post.summary,

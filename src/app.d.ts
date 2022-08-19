@@ -9,3 +9,6 @@ declare namespace App {
 	// interface Session {}
 	// interface Stuff {}
 }
+
+/// <reference types="@sveltejs/kit" />
+/// <reference types="unplugin-icons/types/svelte" />

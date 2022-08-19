@@ -1,4 +1,5 @@
 <script lang="ts">
+	// @ts-nocheck
 	import Github from '~icons/mdi/github-face'
 	import Rss from '~icons/mdi/rss'
 	import Twitter from '~icons/mdi/twitter'
