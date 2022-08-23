@@ -1,18 +1,32 @@
 .markdown {
 	@apply prose-2xl prose-stone font-serif;
+
+	& p {
+		@apply leading-8;
+	}
+	& h2 {
+		@apply mb-2 font-sans text-2xl font-medium text-cyan-700;
+	}
+	& h2 code {
+		@apply text-[1.55rem] font-bold;
+	}
+	& pre {
+		@apply border bg-gray-50 shadow-sm;
+	}
 }
 
-.markdown p {
-	@apply leading-8;
-}
-.markdown h2 {
-	@apply mb-2 font-sans text-2xl font-medium text-cyan-700;
-}
-.markdown h2 code {
-	@apply font-bold text-[1.55rem]
+:root {
+	--prism-font-family: theme('fontFamily.mono');
+	--prism-font-size: theme('fontSize.lg');
+
+	--prism-foreground: theme('colors.slate.700');
+	--prism-background: theme('colors.slate.100');
+	--prism-string: theme('colors.green.700');
+	--prism-literal: theme('colors.blue.700');
+	--prism-keyword: theme('colors.slate.800');
+	--prism-comment: theme('colors.slate.500');
 }
 
-.markdown pre {
-	@apply border bg-gray-50 shadow-sm;
-	line-height: theme('lineHeight.snug') !important;
+.speech-bubble {
+	@apply relative ml-auto w-fit translate-x-12 transform rounded-lg bg-amber-400 px-4 py-2 !text-white;
 }

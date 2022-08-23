@@ -6,3 +6,7 @@ type Frontmatter = {
 }
 
 type Post = { html: string } & Frontmatter
+
+declare module '@mapbox/rehype-prism'
+
+declare module 'shoelace/*'

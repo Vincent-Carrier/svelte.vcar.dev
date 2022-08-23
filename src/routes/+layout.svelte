@@ -16,9 +16,9 @@
 </script>
 
 <Pattern/>
-<div class="mx-auto my-10 flex max-w-3xl flex-col items-center">
+<div class="mx-auto my-10 flex max-w-3xl sm:mx-2 flex-col items-center">
 	<slot name="nav">
-		<nav class="z-10 -mb-4 mr-8 w-[36rem]">
+		<nav class="z-10 -mb-4 mr-8 w-full max-w-lg">
 			<Nav />
 		</nav>
 	</slot>

@@ -1,11 +1,25 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "./shoelace.css";
+
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 @layer base {
+	* {
+		outline: none !important; /* TODO */
+	}
+
 	html {
 		font-synthesis: none;
 		@apply bg-stone-100;
+
+		@media screen(sm) {
+			font-size: 14px;
+		}
+	}
+
+	a {
+		@apply contents;
 	}
 
 	@font-face {

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import 'prism-theme-vars/base.css'
 	import './post.css'
 
 	export let data: { post: Post }
@@ -6,6 +7,6 @@
 </script>
 
 <article class="card px-8 py-6">
-	<header class="h1 mt-4 underline underline-offset-2">{post.title}</header>
+	<header class="h1 mt-4 underline underline-offset-2">{@html post.title}</header>
 	<div class="markdown">{@html post.html}</div>
 </article>

@@ -1,5 +1,9 @@
 <script lang="ts">
 	import { page } from '$app/stores'
+	import { onMount } from 'svelte'
+
+	onMount(() => import('shoelace/tooltip'))
+
 	const paths = [
 		{ href: '/', label: 'about' },
 		{ href: '/posts', label: 'blog' },
@@ -11,14 +15,14 @@
 	]
 </script>
 
-<ul class="card ml-auto flex w-min py-2 font-display text-2xl divide-x">
+<ul class="card w-min ml-auto flex py-2 font-display text-2xl divide-x">
 	{#each paths as path}
 		{@const active = $page.url.pathname === path.href}
 		{@const inactive = !active}
 		<li class="px-4">
 			<a sveltekit:noscroll href={path.href} class:active class:inactive>
 				{#if path.tooltip}
-					<abbr title={path.tooltip}>{path.label}</abbr>
+					<sl-tooltip content={path.tooltip}>{path.label}</sl-tooltip>
 				{:else}
 					{path.label}
 				{/if}
