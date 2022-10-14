@@ -1,6 +1,5 @@
 JavaScript iterators are one of my favourite features of the language, yet nobody seems to know about them. Used well, they can make your code clearer, decoupled, and more memory-efficient.
 
-:h2[So... what's an iterator anyway?]{.speech-bubble}
 Glad you asked. An **Iterator** is, simply put, an object which lets us loop through some values. Its signature looks more or less like this:
 
 ```typescript
@@ -39,56 +38,42 @@ Just like `async` tells the JavaScript parser "This functions returns a `Promise
 
 A ton of things, actually. Some [Lodash](http://lodash.com) utilities are trivial to implement with generators. Here's a few of my favourites:
 
-<details>
-<summary><code>range()</code></summary>
+<sl-tab-group class='h-96 m-8'>
+  <sl-tab slot='nav' panel='range'>range</sl-tab>
+  <sl-tab slot='nav' panel='take'>take</sl-tab>
 
-```js
-function* range(from, to, step = 1) {
-  for (let i = from; i <= to; i += step) {
-    yield i
+  <sl-tab-panel name='range'>
+
+  ```js
+  function* range(from, to, step = 1) {
+    for (let i = from; i <= to; i += step) {
+      yield i
+    }
   }
-}
 
-console.log([...range(4, 10, 2)])
-// => [4, 6, 8, 10]
-```
+  console.log([...range(4, 10, 2)])
+  // => [4, 6, 8, 10]
+  ```
+  </sl-tab-panel>
+  <sl-tab-panel name='take'>
 
-</details>
-<details>
-<summary><code>take()</code></summary>
-
-```js
-function* take(iterable, max) {
-  let i = 0
-  for (let next of iterable) {
-    if (i < max) yield next
-    else return
-    i++
+  ```js
+  function* take(iterable, max) {
+    let i = 0
+    for (let next of iterable) {
+      if (i < max) yield next
+      else return
+      i++
+    }
   }
-}
 
-console.log([...take(range(4, 10, 2), 2)])
-// => [4, 6]
-```
+  console.log([...take(range(4, 10, 2), 2)])
+  // => [4, 6]
+  ```
+  </sl-tab-panel>
+</sl-tab-group>
 
-</details>
-<details>
-<summary><code>map()</code></summary>
-
-```js
-function* map(iterable, transform) {
-  for (let next of iterable) {
-    yield transform(next)
-  }
-}
-
-console.log([...map(range(4, 10, 2), (n) => n ** 2)])
-// => [16, 36, 64, 100]
-```
-
-</details>
-
-You can even implement your own [React-like framework](https://crank.js.org/) on top of Iterables, effectively treating the DOM as a render loop.
+You could even [implement your own React-like framework](https://crank.js.org/) on top of Iterables, effectively treating the DOM as a render loop.
 
 ## You mentioned `yield*` earlier.<br> What's that about?
 
@@ -161,30 +146,3 @@ for (let cell of ticTacToe) {
   // => X O _ O _ ...
 }
 ```
-
-:hr
-
-I hope you can see now how Iterators, Iterables and generators let us write code that is more scalable, more expressive, and more maintainable.
-
-
-:::section
-::header[Bonus round: pipe operator]
-
-The [pipe operator](https://github.com/tc39/proposal-pipeline-operator/wiki#proposal0-original-minimal-proposal) proposal lets us combine our Iterables in a more straightforward, readable fashion:
-
-```js
-fibonacci() 
-  |> take(#, 10)
-  |> map(#, (n) => n ** 2)
-  |> Array.from
-  |> console.log
-// => [0, 1, 1, 4, 9, 25, 64, 169, 441, 1156]
-```
-
-Welcome to the future! Check out the [Babel plugin](https://babeljs.io/docs/en/babel-plugin-proposal-pipeline-operator) if you want to try it for yourself.
-:::
-
-:::section
-::header[Further reading]
-  - [Iteration protocols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on MDN
-:::

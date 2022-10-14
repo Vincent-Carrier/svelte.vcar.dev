@@ -1,7 +1,9 @@
 import prism from '@mapbox/rehype-prism'
 import { h } from 'hastscript'
+import raw from 'rehype-raw'
 import stringify from 'rehype-stringify'
 import directive from 'remark-directive'
+import gfm from 'remark-gfm'
 import parse from 'remark-parse'
 import rehype from 'remark-rehype'
 import { unified } from 'unified'
@@ -27,8 +29,10 @@ function htmlDirective(): any {
 
 export default unified()
 	.use(parse)
+	.use(gfm)
 	.use(directive)
 	.use(htmlDirective)
-	.use(rehype)
+	.use(rehype, { allowDangerousHtml: true })
+	.use(raw)
 	.use(prism)
-	.use(stringify)
+	.use(stringify, { allowDangerousHtml: true })

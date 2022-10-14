@@ -3,7 +3,7 @@
 	import Github from '~icons/mdi/github-face'
 	import Rss from '~icons/mdi/rss'
 	import Twitter from '~icons/mdi/twitter'
-	import profile from './profile.png?w=224&webp'
+	import profile from './profile.png?w=448&webp'
 
 	const socials = [
 		{ Icon: Github, class: 'text-yellow-200', href: 'https://github.com/Vincent-Carrier' },
@@ -12,7 +12,7 @@
 	]
 </script>
 
-<div class="bizcard topography transform sm:scale-90 relative flex h-36 w-min gap-4 px-8 py-4">
+<div class="BizCard topography transform sm:scale-90 relative flex h-36 w-min gap-4 px-8 py-4">
 	<img
 		src={profile}
 		alt="profile"
@@ -33,7 +33,7 @@
 </div>
 
 <style lang="postcss">
-	.bizcard {
+	.BizCard {
 		@apply rounded-md border-4 border-b-0 border-yellow-400 bg-yellow-500 shadow-md;
 	}
 </style>

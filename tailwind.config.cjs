@@ -28,7 +28,7 @@ module.exports = {
 					'flex-y'(val) {
 						return { display: 'flex', flexDirection: 'column', rowGap: val }
 					},
-					flexX(val) {
+					'flex-x'(val) {
 						return { display: 'flex', flexDirection: 'row', columnGap: val }
 					},
 				},

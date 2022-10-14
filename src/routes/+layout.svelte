@@ -3,6 +3,7 @@
 	import '@fontsource/alegreya/variable.css'
 	import "@fontsource/montserrat/variable.css"
 	import '@fontsource/oleo-script'
+	import '@shoelace-style/shoelace/dist/themes/light.css'
 	import '../app.css'
 
 	import Nav from '$lib/Nav.svelte'

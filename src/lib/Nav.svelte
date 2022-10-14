@@ -2,16 +2,16 @@
 	import { page } from '$app/stores'
 	import { onMount } from 'svelte'
 
-	onMount(() => import('shoelace/tooltip'))
+	onMount(() => import('sl-tooltip'))
 
 	const paths = [
 		{ href: '/', label: 'about' },
 		{ href: '/posts', label: 'blog' },
-		{
-			href: '/brainfood',
-			label: 'brainfood',
-			tooltip: "What I've been reading",
-		},
+		// {
+		// 	href: '/brainfood',
+		// 	label: 'brainfood',
+		// 	tooltip: "What I've been reading",
+		// },
 	]
 </script>
 

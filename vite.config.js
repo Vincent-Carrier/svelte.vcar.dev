@@ -19,7 +19,7 @@ const config = {
 	resolve: {
 		alias: [
 			{
-				find: /^shoelace\/(.*)$/,
+				find: /^sl-(.*)$/,
 				replacement: '@shoelace-style/shoelace/dist/components/$1/$1.js',
 			},
 		],
