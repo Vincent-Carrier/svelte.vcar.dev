@@ -38,7 +38,7 @@ Just like `async` tells the JavaScript parser "This functions returns a `Promise
 
 A ton of things, actually. Some [Lodash](http://lodash.com) utilities are trivial to implement with generators. Here's a few of my favourites:
 
-<sl-tab-group class='h-96 m-8'>
+<sl-tab-group class='h-[26rem]'>
   <sl-tab slot='nav' panel='range'>range</sl-tab>
   <sl-tab slot='nav' panel='take'>take</sl-tab>
 

@@ -6,4 +6,11 @@
 			display: none;
 		}
 	}
+
+	sl-tab-group {
+		@apply my-4 border rounded-md;
+	}
+	sl-tab-panel {
+		--padding: 0rem;
+	}
 }

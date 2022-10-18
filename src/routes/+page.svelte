@@ -8,7 +8,7 @@
 		<br>
 		I'm Vincent. I like to make pretty websites, learn dead languages and argue about silly things.
 	</p>
-	<div class="absolute -bottom-16 -right-16 sm:inset-x-0">
+	<div class="absolute -bottom-16 -right-8 sm:right-0">
 		<Bizcard />
 	</div>
 </article>

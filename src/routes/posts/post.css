@@ -4,13 +4,16 @@
 	& p {
 		@apply leading-8;
 	}
+	& a {
+		@apply text-cyan-600;
+	}
 	& h2 {
 		@apply mb-2 font-sans text-2xl font-medium text-cyan-700;
 	}
 	& h2 code {
 		@apply text-[1.55rem] font-bold;
 	}
-	& pre {
+	& > pre {
 		@apply border bg-gray-50 shadow-sm;
 	}
 }
@@ -20,7 +23,7 @@
 	--prism-font-size: theme('fontSize.lg');
 
 	--prism-foreground: theme('colors.slate.700');
-	--prism-background: theme('colors.slate.100');
+	--prism-background: theme('colors.transparent');
 	--prism-string: theme('colors.green.700');
 	--prism-literal: theme('colors.blue.700');
 	--prism-keyword: theme('colors.slate.800');
