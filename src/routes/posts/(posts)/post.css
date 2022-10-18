@@ -2,7 +2,7 @@
 	@apply prose-2xl prose-stone font-serif;
 
 	& h1 {
-		@apply h1 mt-4 underline underline-offset-2;
+		@apply font-display text-4xl text-yellow-500 mt-4 underline underline-offset-2;
 	}
 
 	& p {
