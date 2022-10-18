@@ -1,13 +1,14 @@
 <script lang="ts">
 	// @ts-nocheck
 	import Github from '~icons/mdi/github-face'
+	import Rss from '~icons/mdi/rss'
 	import Twitter from '~icons/mdi/twitter'
 	import profile from './profile.png?w=448&webp'
 
 	const socials = [
 		{ Icon: Github, class: 'text-yellow-200', href: 'https://github.com/Vincent-Carrier' },
 		{ Icon: Twitter, class: 'text-yellow-200', href: 'https://twitter.com/VincntCarrier' },
-		// { Icon: Rss, class: 'text-yellow-200', href: '/posts/index.xml' },
+		{ Icon: Rss, class: 'text-yellow-200', href: '/posts/rss.xml' },
 	]
 </script>
 
