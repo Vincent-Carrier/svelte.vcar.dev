@@ -9,6 +9,10 @@ import rehype from 'remark-rehype'
 import { unified } from 'unified'
 import { visit } from 'unist-util-visit'
 
+export function allPosts() {
+	return import.meta.glob('./**/+page.svelte')
+}
+
 function htmlDirective(): any {
 	return tree => {
 		visit(tree, node => {

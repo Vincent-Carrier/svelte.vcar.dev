@@ -5,7 +5,7 @@ type Frontmatter = {
 	summary: string
 }
 
-type Post = { html: string } & Frontmatter
+type Post = { html: string }
 
 declare module '@mapbox/rehype-prism'
 

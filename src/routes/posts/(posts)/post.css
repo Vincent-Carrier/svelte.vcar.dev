@@ -1,6 +1,10 @@
 .markdown {
 	@apply prose-2xl prose-stone font-serif;
 
+	& h1 {
+		@apply h1 mt-4 underline underline-offset-2;
+	}
+
 	& p {
 		@apply leading-8;
 	}

@@ -1,3 +1,5 @@
+# JavaScript Iterators Made Easy
+
 JavaScript iterators are one of my favourite features of the language, yet nobody seems to know about them. Used well, they can make your code clearer, decoupled, and more memory-efficient.
 
 Glad you asked. An **Iterator** is, simply put, an object which lets us loop through some values. Its signature looks more or less like this:
