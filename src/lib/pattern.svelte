@@ -16,4 +16,18 @@
 	svg {
 		--fill-color: theme(colors.stone.200);
 	}
+
+	svg {
+		animation: slide 5s linear infinite;
+	}
+
+	@keyframes slide {
+		from {
+			transform: translate(-20px, -20px)
+		}
+
+		to {
+			transform: translate(0, 0)
+		}
+	}
 </style>
