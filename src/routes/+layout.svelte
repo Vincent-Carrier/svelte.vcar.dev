@@ -13,18 +13,17 @@
 	import type { LayoutData } from './$types'
 	
 	export let data: LayoutData
-	$: ({ url } = data)
 </script>
 
 <Pattern/>
-<div class="mx-auto my-10 flex max-w-3xl sm:mx-2 flex-col items-center">
+<div class="mx-auto my-10 flex sm:mx-2 flex-col items-center">
 	<slot name="nav">
-		<nav class="z-10 -mb-4 mr-8 w-full max-w-lg">
+		<nav class="z-10 -mb-3 mr-8 w-full max-w-lg">
 			<Nav />
 		</nav>
 	</slot>
-	{#key url}
-		<main in:fly={{ x: 200, duration: 400, delay: 200 }} out:fly={{ x: -200, duration: 200 }}>
+	{#key data.url}
+		<main class='w-full' in:fly={{ x: 200, duration: 400, delay: 200 }} out:fly={{ x: -200, duration: 200 }}>
 			<slot />
 		</main>
 	{/key}

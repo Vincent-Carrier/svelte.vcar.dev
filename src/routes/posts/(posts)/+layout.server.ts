@@ -1,9 +1,9 @@
-import type { Load } from '@sveltejs/kit'
+import type { ServerLoad } from '@sveltejs/kit'
 import fs from 'fs/promises'
 import { resolve } from 'path'
 import md from './markdown'
 
-export const load: Load = async function ({ url }) {
+export const load: ServerLoad = async function ({ url }) {
 	const slug = url.pathname.replace('/posts/', '')
 	const path = resolve('src/routes/posts/(posts)/', slug, 'index.md')
 	const f = await fs.readFile(path, { encoding: 'utf-8' })

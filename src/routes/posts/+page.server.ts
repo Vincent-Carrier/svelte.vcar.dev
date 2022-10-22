@@ -3,8 +3,6 @@ import { allPosts } from './(posts)/markdown'
 
 export const load: PageServerLoad<{ posts: Frontmatter[] }> = async function () {
 	const imports = allPosts()
-	console.log(imports)
-
 	const modules = await Promise.all(Object.values(imports).map(f => f()))
 	const posts = modules.map((m: any) => m.frontmatter) as Frontmatter[]
 	Object.keys(imports).forEach((path, i) => {

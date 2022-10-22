@@ -7,11 +7,11 @@
 	const paths = [
 		{ href: '/', label: 'about' },
 		{ href: '/posts', label: 'blog' },
-		// {
-		// 	href: '/brainfood',
-		// 	label: 'brainfood',
-		// 	tooltip: "What I've been reading",
-		// },
+		{
+			href: '/projects',
+			label: 'projects',
+			// tooltip: "What I've been reading",
+		},
 	]
 </script>
 

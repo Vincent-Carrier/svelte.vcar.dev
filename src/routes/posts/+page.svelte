@@ -2,7 +2,7 @@
 	export let data: { posts: Frontmatter[] }
 </script>
 
-<div class="flex-y-4 mt-8 max-w-2xl">
+<div class="flex-y-4 mx-auto max-w-2xl">
 	{#each data.posts as post}
 		<a href={`/posts/${post.slug}`}>
 			<article class="card px-8 py-6">
