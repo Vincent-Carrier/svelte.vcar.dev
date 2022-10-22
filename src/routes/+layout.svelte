@@ -16,7 +16,7 @@
 </script>
 
 <Pattern/>
-<div class="mx-auto my-10 flex sm:mx-2 flex-col items-center">
+<div class="mx-auto my-10 flex max-sm:mx-2 flex-col items-center">
 	<slot name="nav">
 		<nav class="z-10 -mb-3 mr-8 w-full max-w-lg">
 			<Nav />

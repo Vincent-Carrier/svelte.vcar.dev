@@ -11,11 +11,7 @@
 
 	html {
 		font-synthesis: none;
-		@apply bg-stone-100;
-
-		@media screen(sm) {
-			font-size: 14px;
-		}
+		@apply bg-stone-100 max-sm:text-[14px];
 	}
 
 	a {

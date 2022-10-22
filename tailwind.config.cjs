@@ -9,15 +9,8 @@ module.exports = {
 				serif: ['AlegreyaVariable', 'Alegreya', 'serif'],
 				sans: ['MontserratVariable', 'system-ui', 'sans-serif'],
 				display: ['Oleo Script', 'sans-serif'],
-				mono: ['Berkeley Mono', 'monospace'],
+				// mono: ['Berkeley Mono', 'monospace'],
 			},
-		},
-		screens: {
-			sm: { max: '639px' },
-			md: '640px',
-			lg: '1024px',
-			xl: '1280px',
-			'2xl': '1536px',
 		},
 	},
 	plugins: [

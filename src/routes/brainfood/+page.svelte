@@ -4,10 +4,10 @@
 	export let data: PageData
 </script>
 
-<div class="flex-y-8 sm:gap-y-2 md:mt-8">
+<div class="flex-y-8 max-sm:gap-y-2 md:mt-8">
 	{#each data.foods as food}
 		<div class="flex items-center even:flex-row-reverse group">
-			<article class="card p-10 sm:p-6">
+			<article class="card p-10 max-sm:p-6">
 				<header>
 					<a href={`https://www.goodreads.com/book/show/${food.id}`} target="_blank">
 						<div class="h1 underline underline-offset-2">{food.title}</div>
@@ -21,7 +21,7 @@
 					src={food.image}
 					alt=""
 					loading="lazy"
-					class="sm:hidden bg-gray-200 w-52 group-odd:-ml-4 group-even:-mr-4 z-10 border shadow-md"
+					class="max-sm:hidden bg-gray-200 w-52 group-odd:-ml-4 group-even:-mr-4 z-10 border shadow-md"
 				/>
 			</a>
 		</div>

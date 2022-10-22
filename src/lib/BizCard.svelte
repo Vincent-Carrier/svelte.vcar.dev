@@ -5,13 +5,13 @@
 	import profile from './profile.png?w=448&webp'
 
 	const socials = [
-		{ Icon: Github, class: 'text-yellow-200', href: 'https://github.com/Vincent-Carrier' },
-		{ Icon: Twitter, class: 'text-yellow-200', href: 'https://twitter.com/VincntCarrier' },
-		{ Icon: Rss, class: 'text-yellow-200', href: '/posts/rss.xml' },
+		{ Icon: Github, href: 'https://github.com/Vincent-Carrier' },
+		{ Icon: Twitter, href: 'https://twitter.com/VincntCarrier' },
+		{ Icon: Rss, href: '/posts/rss.xml' },
 	]
 </script>
 
-<div class="BizCard topography transform sm:scale-90 relative flex h-36 w-min gap-4 px-8 py-4">
+<div class="BizCard topography transform max-sm:scale-90 relative flex h-36 w-min gap-4 px-8 py-4">
 	<img
 		src={profile}
 		alt="profile"
@@ -24,7 +24,7 @@
 		<div class="mt-1 flex w-full justify-end gap-1">
 			{#each socials as social}
 				<a href={social.href} target="_blank">
-					<svelte:component this={social.Icon} class={`h-8 w-8 drop-shadow-sm filter ${social.class}`} />
+					<svelte:component this={social.Icon} class="h-8 w-8 drop-shadow-sm filter transition-all text-yellow-200 hover:text-yellow-50" />
 				</a>
 			{/each}
 		</div>
