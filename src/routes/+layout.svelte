@@ -7,7 +7,7 @@
 	import '../app.css'
 
 	import Nav from '$lib/Nav.svelte'
-	import Pattern from '$lib/pattern.svelte'
+	import Pattern from '$lib/Pattern.svelte'
 
 	import { fade } from 'svelte/transition'
 	import type { LayoutData } from './$types'

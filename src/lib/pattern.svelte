@@ -1,4 +1,4 @@
-<svg class="h-full w-full fixed inset-0 -z-10">
+<svg class="fixed inset-0 -z-10 h-full w-full">
 	<defs>
 		<pattern id="pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
 			<g id="pattern" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -17,17 +17,22 @@
 		--fill-color: theme(colors.stone.200);
 	}
 
-	svg {
-		animation: slide 5s linear infinite;
+	circle:nth-child(1) {
+		animation: slide 5s alternate infinite ease-out;
+	}
+	circle:nth-child(2) {
+		animation: slide 5s alternate-reverse infinite ease-out;
 	}
 
 	@keyframes slide {
 		from {
-			transform: translate(-20px, -20px)
+			cx: 3;
+			cy: 3;
 		}
 
 		to {
-			transform: translate(0, 0)
+			cx: 13;
+			cy: 13;
 		}
 	}
 </style>

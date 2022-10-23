@@ -5,8 +5,10 @@
 @import "tailwindcss/utilities";
 
 @layer base {
-	* {
-		outline: none !important; /* TODO */
+	@media (prefers-reduced-motion) {
+		* {
+			animation-duration: 0s !important;
+		}
 	}
 
 	html {
