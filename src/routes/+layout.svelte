@@ -14,7 +14,8 @@
 	export let data: LayoutData
 </script>
 
-<div class="bg-stone-100 h-screen heropattern-autumn-stone-200 py-10">
+<div class="bg-stone-100 fixed inset-0 heropattern-autumn-stone-200" />
+<div class="py-10">
 		<div class="mx-auto max-w-md max-sm:max-w-sm">
 			<nav class="relative z-10 ml-auto w-min translate-y-2 transform">
 				<Nav />
