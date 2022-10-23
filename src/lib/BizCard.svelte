@@ -11,7 +11,7 @@
 	]
 </script>
 
-<div class="BizCard heropattern-diagonallines-yellow-400 transform max-sm:scale-90 relative flex h-36 w-min gap-4 px-8 py-4">
+<div class="BizCard heropattern-diagonallines-yellow-400 transform max-sm:scale-90 relative flex h-36 gap-4 px-8 py-4">
 	<img
 		src={profile}
 		alt="profile"

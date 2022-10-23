@@ -22,7 +22,7 @@
 			</nav>
 		</div>
 		{#key data.url}
-			<main class="max-sm:mx-2" in:fade={{ duration: 200, delay: 150 }} out:fade={{ duration: 150 }}>
+			<main class="relative mx-2" in:fade={{ duration: 200, delay: 150 }} out:fade={{ duration: 150 }}>
 				<slot />
 			</main>
 		{/key}
