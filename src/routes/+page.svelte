@@ -2,7 +2,7 @@
 	import Bizcard from '$lib/BizCard.svelte'
 </script>
 
-<article class="card mx-auto flex max-w-xl flex-col gap-4 p-12 max-sm:p-8">
+<article class="card mx-auto max-w-xl p-12 max-sm:p-8 mb-24">
 	<p class="mb-28 font-serif text-2xl leading-relaxed text-stone-700 max-sm:mb-24">
 		<strong class="mb-4 inline-block text-4xl">
 			Hi there! <span class="wave inline-block">👋</span>
@@ -10,7 +10,7 @@
 		<br />
 		I'm Vincent. I like to make pretty websites, learn dead languages and argue about silly things.
 	</p>
-	<div class="absolute -bottom-16 -right-8 max-sm:right-0">
+	<div class="absolute -bottom-16 sm:-right-8 max-sm:-left-3">
 		<Bizcard />
 	</div>
 </article>
@@ -43,7 +43,7 @@
 		}
 	}
 	.wave {
-		animation: wave 1.5s 0.5s;
+		animation: wave 2s 0.5s;
 		transform-origin: 75% 75%;
 	}
 </style>

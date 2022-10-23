@@ -15,7 +15,7 @@
 	<img
 		src={profile}
 		alt="profile"
-		class="absolute bottom-0 left-4 w-56 drop-shadow-2xl filter"
+		class="absolute bottom-0 left-4 w-56 filter brightness-105"
 	/>
 	<div class="w-36" />
 	<div class="my-auto whitespace-nowrap text-right">

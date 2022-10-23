@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '@fontsource/alegreya/variable-italic.css'
 	import '@fontsource/alegreya/variable.css'
-	import "@fontsource/montserrat/variable.css"
+	import '@fontsource/montserrat/variable.css'
 	import '@fontsource/oleo-script'
 	import '@shoelace-style/shoelace/dist/themes/light.css'
 	import '../app.css'
@@ -9,21 +9,21 @@
 	import Nav from '$lib/Nav.svelte'
 	import Pattern from '$lib/pattern.svelte'
 
-	import { fly } from 'svelte/transition'
+	import { fade } from 'svelte/transition'
 	import type { LayoutData } from './$types'
-	
+
 	export let data: LayoutData
 </script>
 
-<Pattern/>
-<div class="mx-auto my-10 flex max-sm:mx-2 flex-col items-center">
-	<slot name="nav">
-		<nav class="z-10 -mb-3 mr-8 w-full max-w-lg">
+<Pattern />
+<div class="my-10">
+	<div class="mx-auto max-w-md max-sm:max-w-sm">
+		<nav class="relative z-10 ml-auto w-min translate-y-2 transform">
 			<Nav />
 		</nav>
-	</slot>
+	</div>
 	{#key data.url}
-		<main class='w-full' in:fly={{ x: 200, duration: 400, delay: 200 }} out:fly={{ x: -200, duration: 200 }}>
+		<main class="max-sm:mx-2" in:fade={{ duration: 200, delay: 150 }} out:fade={{ duration: 150 }}>
 			<slot />
 		</main>
 	{/key}

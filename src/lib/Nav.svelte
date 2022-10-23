@@ -11,7 +11,7 @@
 	]
 </script>
 
-<ul class="card ml-auto flex w-min divide-x py-2 font-display text-2xl">
+<ul class="card flex w-min divide-x py-2 font-display text-2xl">
 	{#each paths as path}
 		{@const active = $page.url.pathname === path.href}
 		{@const inactive = !active}
