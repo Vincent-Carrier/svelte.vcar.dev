@@ -11,7 +11,7 @@
 	]
 </script>
 
-<div class="BizCard topography transform max-sm:scale-90 relative flex h-36 w-min gap-4 px-8 py-4">
+<div class="BizCard heropattern-diagonallines-yellow-400 transform max-sm:scale-90 relative flex h-36 w-min gap-4 px-8 py-4">
 	<img
 		src={profile}
 		alt="profile"
@@ -34,5 +34,6 @@
 <style lang="postcss">
 	.BizCard {
 		@apply rounded-md border-4 border-b-0 border-yellow-400 bg-yellow-500 shadow-md;
+		background-size: 8px;
 	}
 </style>

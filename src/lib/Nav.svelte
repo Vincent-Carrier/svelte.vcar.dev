@@ -16,7 +16,7 @@
 		{@const active = $page.url.pathname === path.href}
 		{@const inactive = !active}
 		<li class="px-4">
-			<a data-sveltekit-noscroll href={path.href} class:active class:inactive>
+			<a data-sveltekit-noscroll sveltekit:prefetch href={path.href} class:active class:inactive>
 				{path.label}
 			</a>
 		</li>
